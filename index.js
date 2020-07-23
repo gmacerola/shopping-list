@@ -21,8 +21,8 @@ function removeItem () {
 
 function check () {
     $(".shopping-list").on("click" , ".shopping-item-toggle" , function(event) {
-        console.log("Button Pressed");
-        $(this).parent().parent(".shopping-item").toggleClass(".shopping-item__checked");
+        const shoppingItem = $(this).parent().parent();
+        $(shoppingItem).children("span").toggleClass("shopping-item__checked");
     }
     )
 }
